@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org" >
+    <head>
+       <title>add product</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <style >
+        
+        
+            body{
+                background-color:skyblue;
+            }
+        
+        </style>
+        
+    </head>
+    <body>
+        
+        <center>
+        <table border="5" cellpadding="15"  cellspacing="10" bordercolor="blue" >
+            <tr>
+             
+                <td>name</td>
+                <td># of views </td>
+                <td># of buys</td>
+            </tr>
+            <tr th:each="product : ${stat}"> 
+                <td id="x" th:text="${product.Name}"  ></td>
+              
+                <td th:text="${product.num_of_view}"></td>
+                <td th:text="${product.num_of_buy}"></td>
+                
+            </tr>
+        </table>
+		
+	    <form method ="post"  action ="# " th:action="@{/max}" th:object="${p}" >
+			               <input type="submit" value="max" ></input>
+	</form>
+          </center>
+
+    </body>
+
+</html>

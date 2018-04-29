@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>user-page</title>
+<style>
+body {
+  background-color: rgb(30, 23, 75);
+  font: 400 2.188em/1.38 Helvetica;
+  color: rgb(255, 255, 255);
+}
+
+.container {
+  position: relative;
+  float: left;
+}
+
+.text {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 1;
+  width: 65.5555555555%;
+  min-height: 43px;
+  margin: -84px 0 0 22%;
+  font-size: 1em;
+  color: rgb(255, 255, 255);
+}
+
+._button {
+  display: block;
+  float: left;
+  border-radius: 3px;
+  font-size: 0.457em;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+
+.container-1 {
+  z-index: 0;
+  width: 65.2222222222%;
+  height: 104px;
+  margin-left: 20.22049%;
+  background-color: rgba(71, 30, 115, 0.93);
+}
+
+.container-2 {
+  clear: both;
+  z-index: 2;
+  width: 61.1111111111%;
+  height: 253px;
+  margin: 55px 0 0 22.79861%;
+  background-color: rgba(88, 18, 147, 0.45);
+}
+
+._button-1 {
+  width: 7.5972222222%;
+  height: 30px;
+  margin: 8px 0 0 78%;
+  background-color: rgb(149, 24, 170);
+}
+
+._button-2 {
+  position: relative;
+  clear: both;
+  z-index: 3;
+  width: 49.1777777777%;
+  height: 74px;
+  margin: -216px 0 0 29.59896%;
+  background-color: rgb(202, 209, 20);
+}
+
+._button-3 {
+  position: relative;
+  z-index: 4;
+  width: 49.1770833333%;
+  height: 74px;
+  margin: -120px 0 0 29.59896%;
+  background-color: rgb(202, 209, 20);
+}
+.fluid-span-1 {
+  width: 6.5%;
+}
+
+.fluid-span-2 {
+  width: 15%;
+}
+
+.fluid-span-3 {
+  width: 23.5%;
+}
+
+.fluid-span-4 {
+  width: 32%;
+}
+
+.fluid-span-5 {
+  width: 40.5%;
+}
+
+.fluid-span-6 {
+  width: 49%;
+}
+
+.fluid-span-7 {
+  width: 57.5%;
+}
+
+.fluid-span-8 {
+  width: 66%;
+}
+
+.fluid-span-9 {
+  width: 74.5%;
+}
+
+.fluid-span-10 {
+  width: 83%;
+}
+
+.fluid-span-11 {
+  width: 91.5%;
+}
+
+.fluid-span-12 {
+  width: 100%;
+}
+
+.fluid-offset-1 {
+  margin-left: 8.5%;
+}
+
+.fluid-offset-2 {
+  margin-left: 17%;
+}
+
+.fluid-offset-3 {
+  margin-left: 25.5%;
+}
+
+.fluid-offset-4 {
+  margin-left: 34%;
+}
+
+.fluid-offset-5 {
+  margin-left: 42.5%;
+}
+
+.fluid-offset-6 {
+  margin-left: 51%;
+}
+
+.fluid-offset-7 {
+  margin-left: 59.5%;
+}
+
+.fluid-offset-8 {
+  margin-left: 68%;
+}
+
+.fluid-offset-9 {
+  margin-left: 76.5%;
+}
+
+.fluid-offset-10 {
+  margin-left: 85%;
+}
+
+.fluid-offset-11 {
+  margin-left: 93.5%;
+}
+
+</style>
+</head>
+<body class="body page-user-page clearfix">
+  <div class="container container-1"></div>
+  <p class="text">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Online Smart Sales</p>
+  <a href="http://localhost:8088/login" th:action="@{/login}" th:object="${user}"><button class="_button _button-1">log out</button></a>
+  <div class="container container-2"></div>
+  <a href="http://localhost:8088/productinfo" th:action="@{/productinfo}" th:object="${product}"><button class="_button _button-2">Product information</button></a>
+  <a href="http://localhost:8088/add_p_storeowner" th:action="@{/add_p_storeowner}" th:object="${product}"><button class="_button _button-3">Add Product</button></a>
+</body>
+</html>

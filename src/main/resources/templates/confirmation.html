@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+       <title>confirmation</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    </head>
+    <body bgcolor = "rgb(5, 52, 122)" text = "red">
+        
+        <center>
+    
+        <table border="5">
+            <tr>
+                <td>id</td>
+                <td>name</td>
+                <td>checked</td>
+               
+            </tr>
+            <tr th:each="store: ${stores}">
+                <td th:text="${store.id}"></td>
+                <td th:text="${store.name}"  ></td>
+                <td th:text="${store.checked_by_admin}"  ></td>
+                
+            </tr>
+        </table>
+        
+        <br><br>
+        <form method ="post"  action ="# " th:action="@{/confirmation}" th:object="${store}" >
+          Store ID <input type="number" th:field="*{id}" />
+          <input type="submit" value="confirm"/>
+           </form>
+        <br><br>
+        <a href="http://localhost:8088/login" th:action="@{/login}" th:object="${user}"><button>logout</button></a>
+        </center>
+    </body>
+</html>

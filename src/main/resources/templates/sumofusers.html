@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>statistics</title>
+<style>
+body {
+  background-color: rgb(30, 23, 75);
+  font: 400 1em/1.38 Helvetica;
+  color: rgb(0, 0, 0);
+}
+
+.container {
+  float: left;
+}
+
+.text {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 1;
+  width: 65.5555555555%;
+  min-height: 43px;
+  margin: -84px 0 0 21.89063%;
+  font-size: 2.188em;
+  color: rgb(255, 255, 255);
+}
+
+._button {
+  display: block;
+  float: left;
+  border-radius: 3px;
+  font-size: 1em;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.container-1 {
+  position: relative;
+  z-index: 0;
+  width: 65.2222222222%;
+  height: 104px;
+  margin-left: 20.11111%;
+  background-color: rgba(71, 30, 115, 0.93);
+}
+
+.container-2 {
+  clear: both;
+  width: 61.5555555555%;
+  height: 206px;
+  margin: 51px 0 0 20.1111111111%;
+  background-color: rgba(88, 18, 147, 0.45);
+}
+
+._button-1 {
+  width: 16.2204861111%;
+  height: 74px;
+  margin-left: 3.89063%;
+  background-color: rgb(202, 209, 20);
+}
+
+._button-2 {
+  position: relative;
+  z-index: 3;
+  width: 15.2222222222%;
+  height: 74px;
+  margin-left: 0.99306%;
+  background-color: rgb(202, 209, 20);
+}
+
+._button-3 {
+  position: relative;
+  z-index: 5;
+  width: 15%;
+  height: 74px;
+  margin-left: 1.32813%;
+  background-color: rgb(202, 209, 20);
+}
+
+._button-4 {
+  position: relative;
+  z-index: 6;
+  width: 18%;
+  height: 74px;
+  margin-left: 1.22049%;
+  background-color: rgb(202, 209, 20);
+}
+
+._button-5 {
+  position: relative;
+  z-index: 7;
+  width: 19.2222222222%;
+  height: 74px;
+  margin-left: 1.2239583333%;
+  background-color: rgb(202, 209, 20);
+}
+
+._button-6 {
+  clear: both;
+  width: 7.5972222222%;
+  height: 30px;
+  margin: 10px 0 0 84.6875%;
+  background-color: rgb(149, 24, 170);
+}
+.fluid-span-1 {
+  width: 6.5%;
+}
+
+.fluid-span-2 {
+  width: 15%;
+}
+
+.fluid-span-3 {
+  width: 23.5%;
+}
+
+.fluid-span-4 {
+  width: 32%;
+}
+
+.fluid-span-5 {
+  width: 40.5%;
+}
+
+.fluid-span-6 {
+  width: 49%;
+}
+
+.fluid-span-7 {
+  width: 57.5%;
+}
+
+.fluid-span-8 {
+  width: 66%;
+}
+
+.fluid-span-9 {
+  width: 74.5%;
+}
+
+.fluid-span-10 {
+  width: 83%;
+}
+
+.fluid-span-11 {
+  width: 91.5%;
+}
+
+.fluid-span-12 {
+  width: 100%;
+}
+
+.fluid-offset-1 {
+  margin-left: 8.5%;
+}
+
+.fluid-offset-2 {
+  margin-left: 17%;
+}
+
+.fluid-offset-3 {
+  margin-left: 25.5%;
+}
+
+.fluid-offset-4 {
+  margin-left: 34%;
+}
+
+.fluid-offset-5 {
+  margin-left: 42.5%;
+}
+
+.fluid-offset-6 {
+  margin-left: 51%;
+}
+
+.fluid-offset-7 {
+  margin-left: 59.5%;
+}
+
+.fluid-offset-8 {
+  margin-left: 68%;
+}
+
+.fluid-offset-9 {
+  margin-left: 76.5%;
+}
+
+.fluid-offset-10 {
+  margin-left: 85%;
+}
+
+.fluid-offset-11 {
+  margin-left: 93.5%;
+}
+
+
+</style>
+</head >
+<body class="body page-statistics clearfix" text = "white">
+  <div class="container container-1"></div>
+  <p class="text">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Online Smart Sales</p>
+  <a href="http://localhost:8088/minproduct" th:action="@{/minproduct}" th:object="${product}"><button class="_button _button-1">min Product&nbsp;</button></a>
+  <a href="http://localhost:8088/maxproduct" th:action="@{/maxproduct}" th:object="${product}"><button class="_button _button-2">maxProduct</button></a>
+  <a href="http://localhost:8088/sumofproducts" th:action="@{/sumofproducts}" th:object="${products}"><button class="_button _button-3">sum Product</button></a>
+  <a href="http://localhost:8088/sumofusers" th:action="@{/sumofusers}" th:object="${user}"><button class="_button _button-4">sum user</button></a>
+  <button class="_button _button-5">offer</button>
+  <button class="_button _button-6">log out</button>
+  <div class="container container-2">
+      <center> <h2>the sum of users is  : <a th:text="${sumofusers}"></a>  </h2> </center>
+</div>
+</body>
+</html>

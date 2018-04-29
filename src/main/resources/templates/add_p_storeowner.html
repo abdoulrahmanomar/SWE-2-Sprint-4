@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org" >
+    <head>
+       <title>add product</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ 
+            <style >
+        
+        
+            
+        
+        
+        </style>
+        
+        
+    </head>
+    <body bgcolor = "rgb(5, 52, 122)" text = "red"> 
+      
+        <center  >
+        <table border="5" cellpadding=15  cellspacing=10 bordercolor="blue">
+            <tr>
+                <td color = "white">id</td>
+                <td>name</td>
+                <td>min price</td>
+                <td>max price </td>
+                <td>quantity</td>
+                
+            </tr>
+            <tr th:each="product : ${products}">
+                <td th:text="${product.id}"></td>
+                <td th:text="${product.Name}" ></td>
+                <td th:text="${product.min_price}"></td>
+                <td th:text="${product.max_price}"></td>
+                <td th:text="${product.quantity}"></td>
+                
+            </tr>
+        </table>
+        
+        <br><br>
+        <form method ="post"  action ="# " th:action="@{/add_p_storeowner}" th:object="${product}" >
+          product ID <input type="number" th:field="*{id}" color = "white"/>
+          price <input type ="number"  th:field="*{price}" />
+          <input type="submit" value="confirm"/>
+           </form>
+        <br><br>
+        <a href="http://localhost:8080/login" th:action="@{/login}" th:object="${user}"><button>logout</button></a>
+        </center>
+    </body>
+</html>

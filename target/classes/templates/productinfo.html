@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+       <title>add product</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ 
+        
+    </head>
+    <body bgcolor = "rgb(5, 52, 122)" text = "red">
+        
+        <center>
+        <table border="5">
+            <tr>
+                <td>id</td>
+                <td>name</td>
+                <td>price</td>
+                <td># of views </td>
+                <td># of buys</td>
+            </tr>
+            <tr th:each="product : ${productinfo}">
+                <td th:text="${product.ProductID}"></td>
+                <td th:text="${product.Name}"  ></td>
+                <td th:text="${product.price}"></td>
+                <td th:text="${product.num_of_view}"></td>
+                <td th:text="${product.num_of_buy}"></td>
+                
+                
+                
+            </tr>
+        </table>
+           <br><br>
+        <a href="http://localhost:8088/add_p_storeowner" th:action="@{/add_p_storeowner}" th:object="${product}"><button>Go To confirm products</button></a>
+        <br><br>
+        <a href="http://localhost:8088/login" th:action="@{/login}" th:object="${user}"><button>logout</button></a>
+        </center>   
+    </body>
+</html>

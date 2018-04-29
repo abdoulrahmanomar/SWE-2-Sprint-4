@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+ <html xmlns:th="http://www.thymeleaf.org" 
+  >
+    <head>
+        <title>addproduct</title>
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+          <style >
+        
+        
+            body{
+                background-color:skyblue;
+            }
+            .myform{
+                text-align: center;
+                margin-top: 50px;
+                background-color:gainsboro;
+                width: 300px;
+                margin-left: 550px;
+                height: 500px;
+            }
+            #name{
+                margin-top: 100px;
+            }
+        
+        
+        
+        </style>
+        
+        
+    </head>
+    <body>
+        <div class="myform">
+		<form method ="post"  action ="# " th:action="@{/addoffer}" " >
+			   user id<input  type="text"  ></input>
+			 <input type="submit" value="give offer" ></input>
+				</form>
+       <form method ="post"  action ="# " th:action="@{/ustat}" " >
+			 <input type="submit" value="user stat" ></input>
+				</form>
+				
+
+        <form method ="post"  action ="# " th:action="@{/pstat}" " >
+			 <input type="submit" value="product stat" ></input>
+				</form>
+    </body>
+</html>
